@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Solution {
 
@@ -44,5 +45,15 @@ public class Solution {
             }
         }
         return list;
+    }
+
+    public ArrayList<Integer> removeEven(ArrayList<Integer> intList) {
+        Iterator<Integer> intIter = intList.iterator();
+        while (intIter.hasNext()) {
+            if (intIter.next() % 2 == 0) {
+                intIter.remove();
+            }
+        }
+        return intList;
     }
 }

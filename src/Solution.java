@@ -29,4 +29,20 @@ public class Solution {
         }
         return count1 == count2;
     }
+
+    public ArrayList<Integer> sortEven(ArrayList<Integer> list) {
+        for (int i = list.size() - 1; i > 0; i--) {
+            while (list.get(i) % 2 != 0) {
+                i--;
+            }
+            for (int j = 0; j < i; j++) {
+                if (list.get(j) > list.get(i) && list.get(j) % 2 == 0) {
+                    int temp = list.get(i);
+                    list.set(i, list.get(j));
+                    list.set(j, temp);
+                }
+            }
+        }
+        return list;
+    }
 }

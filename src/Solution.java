@@ -33,7 +33,7 @@ public class Solution {
 
     public ArrayList<Integer> sortEven(ArrayList<Integer> list) {
         for (int i = list.size() - 1; i > 0; i--) {
-            while (list.get(i) % 2 != 0) {
+            while (i > 0 && list.get(i) % 2 != 0) {
                 i--;
             }
             for (int j = 0; j < i; j++) {
